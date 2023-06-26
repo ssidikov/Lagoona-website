@@ -1,0 +1,431 @@
+@font-face {
+   font-family: "Muller";
+   font-style: normal;
+   font-weight: 300;
+   font-display: swap;
+   src: url("../Fonts/MullerLight.woff2") format("woff2"), url("../Fonts/MullerLight.woff") format("woff");
+}
+
+@font-face {
+   font-family: "Muller";
+   font-style: normal;
+   font-weight: 400;
+   font-display: swap;
+   src: url("../Fonts/MullerRegular.woff2") format("woff2"), url("../Fonts/MullerRegular.woff") format("woff");
+}
+
+@font-face {
+   font-family: "Muller";
+   font-style: normal;
+   font-weight: 500;
+   font-display: swap;
+   src: url("../Fonts/MullerMedium.woff2") format("woff2"), url("../Fonts/MullerMedium.woff") format("woff");
+}
+
+@font-face {
+   font-family: "Muller";
+   font-style: normal;
+   font-weight: 600;
+   font-display: swap;
+   src: url("../Fonts/MullerBold.woff2") format("woff2"), url("../Fonts/MullerBold.woff") format("woff");
+}
+
+* {
+   box-sizing: border-box;
+}
+
+body {
+   font-family: "Muller", sans-serif;
+   background-color: #f6f7f8;
+}
+
+h2,
+h3 {
+   margin: 0;
+   background-color: transparent;
+}
+
+:root {
+   --white-color: #ffffff;
+   --black-color: #333333;
+   --grey-color: #e5e5e5;
+   --orange-color: #cc9933;
+   --dark-grey: #666666;
+   --lighty-grey: #e1e1e1;
+   --dark-black: #0b0b0b;
+}
+
+.visually-hidden {
+   position: absolute !important;
+   clip: rect(1px 1px 1px 1px);
+   clip: rect(1px, 1px, 1px, 1px);
+   padding: 0 !important;
+   border: 0 !important;
+   height: 1px !important;
+   width: 1px !important;
+   overflow: hidden;
+}
+
+a {
+   text-decoration: none;
+   background-color: transparent;
+   color: #0b0b0b;
+}
+
+ul {
+   margin: 0;
+   padding: 0;
+   list-style: none;
+}
+
+/* .list-reset {
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+} */
+
+.site-heading {
+   padding-left: 40px;
+   font-weight: 500;
+   font-size: 40px;
+   line-height: 40px;
+   color: #0b0b0b;
+}
+
+.site-btn {
+   padding: 13px 20px;
+   cursor: pointer;
+   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+   background-color: transparent;
+   border: 1px solid var(--orange-color);
+   color: var(--orange-color);
+   border-radius: 10px;
+}
+
+.site-btn:hover {
+   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+   color: var(--dark-black);
+   background-color: var(--orange-color);
+}
+
+.site-link {
+   transition: color 0.3s ease-in-out;
+   color: #ffffff;
+}
+
+.site-link:hover {
+   transition: color 0.3s ease-in-out;
+   color: #f1f1f1;
+}
+
+.container {
+   min-width: 1200px;
+   margin: 0 auto;
+   padding: 0 15px;
+}
+
+/* header */
+
+.header-top {
+   display: flex;
+   padding-top: 30px;
+   padding-bottom: 24px;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.header-wrapper {
+   display: flex;
+   align-items: center;
+}
+
+.logo {
+   margin-right: 40px;
+}
+
+.header-tel {
+   font-weight: 500;
+   font-size: 20px;
+   line-height: 20px;
+   color: #666666;
+}
+
+.header-login {
+   background-image: url("../img/svg/Vector.svg");
+   background-repeat: no-repeat;
+   background-position: left center;
+   display: flex;
+   width: 155px;
+   height: 24px;
+   justify-content: center;
+   align-items: center;
+   gap: 5px;
+   flex-shrink: 0;
+   padding-left: 30px;
+   color: #cc9933;
+   white-space: nowrap;
+}
+
+.header-bottom {
+   display: flex;
+   justify-content: space-between;
+   /* padding: 12px 45px; */
+   /* border-radius: 15px; */
+   background-color: var(--white-color);
+   background: rgba(255, 255, 255, 0.5); /* Set a semi-transparent background color */
+   backdrop-filter: blur(10px); /* Apply a blur effect to the container */
+   border-radius: 10px; /* Optionally, add rounded corners to the container */
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow to enhance the effect */
+   padding: 20px 45px; /* Add some padding to the container */
+}
+
+.nav-list {
+   display: flex;
+   height: 100%;
+   align-items: center;
+}
+
+.nav-item:not(:last-child) {
+   margin-right: 45px;
+}
+
+.nav-link {
+   transition: color 0.3s ease-in-out;
+   font-weight: 500;
+   color: #0b0b0b;
+}
+
+.nav-link:hover {
+   transition: color 0.3s ease-in-out;
+   color: var(--orange-color);
+}
+
+.header-inner {
+   border-left: 1px solid var(--lighty-grey);
+   padding-left: 57px;
+}
+
+.header-btn:first-child {
+   margin-right: 35px;
+}
+
+/* offers */
+
+.offers {
+   padding-top: 70px;
+}
+
+.offers-heading {
+   margin-bottom: 20px;
+}
+
+.offers-content {
+   display: flex;
+   justify-content: space-between;
+}
+
+.offers-content-left,
+.offers-content-right {
+   width: 49%;
+   height: 540px;
+}
+
+.offer-article {
+   height: 100%;
+   border-radius: 15px;
+   background-repeat: no-repeat;
+   background-position: center center;
+   background-size: cover;
+   padding: 214px 215px 35px 39px;
+   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.offers-content-left > .offer-article {
+   height: 258px;
+   padding: 42px 240px 40px 40px;
+}
+
+.offers-content-left > .offer-article:first-child {
+   margin-bottom: 23px;
+}
+
+.offers-content-left > .offer-article .offer-article-title {
+   font-weight: 700;
+   font-size: 40px;
+   line-height: 40px;
+   color: var(--white-color);
+   margin-bottom: 14px;
+}
+
+.offer-article-title-right {
+   padding-top: 35px;
+   font-weight: 700;
+   font-size: 60px;
+   line-height: 60px;
+   color: #ffffff;
+   margin-bottom: 12px;
+}
+
+.offer-article-price {
+   align-self: stretch;
+   display: flex;
+   flex-wrap: wrap;
+   align-items: flex-end;
+   margin-bottom: 30px;
+   font-size: 20px;
+   font-weight: 500;
+   color: #ffffff;
+   opacity: 0.8;
+}
+
+.offer-article-price-right {
+   align-self: stretch;
+   display: flex;
+   flex-wrap: wrap;
+   align-items: flex-end;
+   font-size: 20px;
+   color: #ffffff;
+   opacity: 0.8;
+   margin-bottom: 30px;
+}
+
+.offer-article-link {
+   padding-right: 16px;
+   display: flex;
+   background-image: url("../img/svg/arrow1.svg");
+   background-repeat: no-repeat;
+   background-position: right center;
+   margin-left: 40px;
+}
+
+/* about */
+
+.about {
+   padding-top: 70px;
+   padding-bottom: 9px;
+}
+
+.about-heading {
+   margin-bottom: 10px;
+   font-weight: 500;
+}
+
+.about-text {
+   margin: 0;
+   margin-bottom: 53px;
+   padding-left: 45px;
+   line-height: 32px;
+   font-size: 16px;
+   font-weight: 500;
+   color: #999999;
+   text-align: justify;
+   opacity: 0; /* Initially hide the text */
+   transform: translateY(50px); /* Move the text 50px down */
+   animation: slideIn 1s forwards; /* Apply the animation */
+}
+
+@keyframes slideIn {
+   0% {
+      opacity: 0;
+      transform: translateY(50px);
+   }
+   100% {
+      opacity: 1;
+      transform: translateY(0);
+   }
+}
+
+/* service */
+
+.services {
+   padding-top: 35px;
+   padding-bottom: 35px;
+}
+
+.services-heading {
+   margin-bottom: 18px;
+}
+
+.services-list {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+}
+
+.services-item {
+   width: 49%;
+   height: 330px;
+   padding: 200px 45px 50px;
+   border-radius: 15px;
+   background-repeat: no-repeat;
+   background-position: top center;
+   background-color: #ffffff;
+   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.services-item:nth-child(-n + 2) {
+   margin-bottom: 23px;
+}
+
+.service-title {
+   display: inline-block;
+   margin-bottom: 6px;
+   background-image: url("../img/svg/arrow1.svg");
+   background-repeat: no-repeat;
+   background-position: right center;
+   padding-right: 18px;
+   color: #c93;
+}
+
+.service-link {
+   font-weight: 700;
+   font-size: 20px;
+   color: #c93;
+}
+
+.service-description {
+   margin: 0;
+   max-width: 402px;
+   line-height: 32px;
+   font-weight: 500;
+   color: #0b0b0b;
+}
+
+/* advantages */
+
+.advantages {
+   padding-top: 36px;
+}
+
+.advantages-heading {
+   margin-bottom: 30px;
+}
+
+.advantages-list {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+}
+
+.advantages-item {
+   width: 275px;
+   height: 275px;
+   padding: 98px 42px 41px 45px;
+   border-radius: 15px;
+   background-repeat: no-repeat;
+   background-position: 20% 20%;
+   background-color: var(--white-color);
+   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.advantages-item:nth-child(-n + 4) {
+   margin-bottom: 24px;
+}
+
+.advantages-text {
+   line-height: 32px;
+}
+
+.advantages-description {
+   padding-top: 10px;
+}
